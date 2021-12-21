@@ -11,7 +11,7 @@ async function main() {
   await mongoose.connect('mongodb://localhost:27017/enquiry',{useNewUrlParser:true});
 }
 
-const port = 8000;
+const port = process.env.PORT || 8000;1 
 
 //Define mongoose schema
 const callSchema = new mongoose.Schema({
